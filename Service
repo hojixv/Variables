@@ -1,0 +1,31 @@
+{,
+
+local Target = nil
+local V2 = Vector2.new
+local Fov = Drawing.new("Circle")
+local holdingMouseButton = false
+local lastToolUse = 0
+local HitPoint = Drawing.new("Circle")
+local FoVPartz = {}  
+
+local G = game
+local Run_Service = G:GetService("RunService")
+local Players = G:GetService("Players")
+local UserInputService = G:GetService("UserInputService")
+local Local_Player = Players.LocalPlayer
+local Mouse = Local_Player:GetMouse()
+local Current_Camera = G:GetService("Workspace").CurrentCamera
+local Replicated_Storage = G:GetService("ReplicatedStorage")
+local StarterGui = G:GetService("StarterGui")
+local Workspace = G:GetService("Workspace")
+
+-- fov 
+
+local function clearFovParts()
+    for _, part in pairs(FovParts) do
+        part:Remove()
+    end
+    FovParts = {}
+end
+
+},
